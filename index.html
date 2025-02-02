@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Hacktifit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Hacktifit</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">HOW TO USE</a></li>
+        <li><a href="#calories">CALORIES</a></li>
+        <li><a href="#fitnes">W.E.B</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Health Tracker</h1> 
+  <p>Ayo segera atur kesehatan-mu!</p> 
+
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Mengapa Saya Harus Menggunakannya ?</h1><br>
+      <h4>Melacak kesehatan dan kebugaran Anda merupakan bagian penting dari gaya hidup sehat dan aktif. Melacak kesehatan dan kebugaran membantu Anda mengukur kemajuan dengan mengukur keberhasilan program latihan dan perencanaan makan, sehingga Anda dapat berfokus pada metode yang paling sesuai untuk Anda.</h4><br>
+      <p>Angka-angka pelacak kesehatan memudahkan untuk memahami bagaimana pilihan gaya hidup sehat memengaruhi penampilan dan perasaan Anda, sehingga Anda dapat membuat keputusan yang lebih tepat dan merancang tindakan baru jika rencana Anda saat ini tidak berhasil bagi Anda. Aplikasi pelacak kesehatan dapat meningkatkan motivasi Anda saat Anda membentuk kebiasaan sehat yang berkelanjutan seumur hidup. Aplikasi pelacak kesehatan memberi tahu Anda apa yang Anda lakukan dengan benar dan kapan harus memberi pujian pada diri sendiri.</p>
+      <br><button class="btn btn-default btn-lg"><a href="hacktifit.html" >Mulai!</a></button>
+    </div>
+    <div class="col-sm-4">
+      <span><img src="icon/icon.png"</span>
+    </div>
+  </div>
+</div>
+
+    <!-- calories section -->
+    <div id="calories">
+        <div class="container">
+        <section class="input-section">
+        <section class="workout-list">
+                <h2>Your Workouts</h2>
+                <ul id="workouts"></ul>
+        </section>
+        <section class="chart-section">
+                <h2>Calories Burned Chart</h2>
+                <canvas id="caloriesChart"></canvas>
+                <div class="total-calories">
+                <h3>Total Calories Burned: <span id="total-calories">0</span></h3>
+                </div>
+        </section>
+    </div>
+    </div>
+
+    <!-- water, exercise, dan sugar section -->
+
+    <br><br><br><br><br><br>
+    <div id="fitnes">
+    <h1 class="section-title" style="text-align: center;">Seberapa lama kamu olahraga?</h1><br><br>
+    <div class="container">
+    <section class="input-section">
+      <section class="workout-list">
+              <table>
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Water Intake <br> (in ml)</th>
+                      <th>Exercise Duration <br> (in min)</th>
+                      <th>Blood Sugar Level <br> (in mg/dL)</th>
+                  </tr>
+              </thead>
+              <tbody id="output">
+              </tbody>
+              </table>
+      </section>
+    </section>
+    </div>
+    </div>
+<!-- Image of location/map -->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script src="script/script.js"></script>
+
+</body>
+</html>
