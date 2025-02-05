@@ -18,22 +18,20 @@
         <!-- Header with main title and description -->
         <header>
             <h1>Hacktifit</h1>
-            <p>Track your workouts and calories burned</p>
+            <p>Lacak latihan Anda dan kalori yang terbakar</p>
         </header>
 
         <!-- Section for adding workout data with form input -->
         <section class="input-section">
-            <h2>Add Workout</h2>
+            <h2>Tambahkan Latihan</h2>
             <!-- Form for user input with workout name and calories burned -->
             <form id="workout-form">
                 <input type="text" id="workout-name" placeholder="Workout Name" required>
                 <input type="number" id="calories-burned" placeholder="Calories Burned" required min="1">
-                <button type="submit">Add Workout</button>
+                <button type="submit">Add</button>
             </form>
             <!-- Displaying the total calories burned -->
-            <div class="total-calories">
-                <h3>Total Calories Burned: <span id="total-calories">0</span></h3>
-            </div>
+            
         </section>
 
         <!-- Section for listing all added workouts -->
@@ -48,6 +46,9 @@
             <h2>Calories Burned Chart</h2>
             <!-- Canvas element for the chart -->
             <canvas id="caloriesChart"></canvas>
+            <div class="total-calories">
+                <h3>Total Calories Burned: <span id="total-calories">0</span></h3>
+            </div>
         </section>
     </div>
 
@@ -82,9 +83,9 @@
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Water Intake <br> (in ml)</th>
-                        <th>Exercise Duration <br> (in min)</th>
-                        <th>Blood Sugar Level <br> (in mg/dL)</th>
+                        <th>Water Intake</th>
+                        <th>Exercise Duration</th>
+                        <th>Blood Sugar Level</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>

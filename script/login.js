@@ -1,9 +1,9 @@
-if (localStorage.getItem("isLogin") !== null) {
-    if (localStorage.getItem("isLogin") === 'true') {
-        // langsung alihkan ke index.html
-        window.location.href = 'index.html'
-    }
-}
+// if (localStorage.getItem("isLogin") !== null) {
+//     if (localStorage.getItem("isLogin") === 'true') {
+//         // langsung alihkan ke index.html
+//         window.location.href = 'index.html'
+//     }
+// }
 
 document.getElementById("btnLogin").addEventListener("click", () => {
     login()
@@ -40,7 +40,7 @@ function login() {
         if (user['email'] === email) {
             if (user['password'] === password) {
                 // berhasil login
-                window.location.href = 'index.html'
+                window.location.href = 'home.html'
                 localStorage.setItem("isLogin", true)
 
                 // simpan informasi user yang login
