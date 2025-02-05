@@ -66,7 +66,7 @@ function register() {
     }
     users.push(user)
     localStorage.setItem("users", JSON.stringify(users))
-    window.location.href = 'index.html'
+    window.location.href = 'login.html'
 
     // save login state
     localStorage.setItem('isLogin', true)
