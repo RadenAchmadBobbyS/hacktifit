@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+    <div class="flex flex-col justify-center h-screen">
+
+        <div class="flex flex-col p-8 justify-center bg-white w-md mx-auto mt-4 rounded-sm">
+            <h1 class="mx-auto text-black">Daftar Akun</h1>
+            <p id="error" class="mt-2 mx-auto hidden">X tidak boleh kosong</p>
+            <label class="mt-4">Nama Lengkap</label>
+            <input id="input_nama_lengkap" type="text" class="p-2 rounded-sm border-gray"
+                placeholder="Masukkan nama lengkap" />
+
+            <label>Email</label>
+            <input id="input_email" type="text" class="input-field p-2 rounded-sm border-gray"
+                placeholder="Masukkan email" />
+
+            <label>Password</label>
+            <input id="input_password" type="password" class="input-field p-2 rounded-sm border-gray"
+                placeholder="Masukkan password" />
+
+            <label>Konfirmasi Password</label>
+            <input id="input_konfirmasi_password" type="password" class="input-field p-2 rounded-sm border-gray"
+                placeholder="Masukkan password" />
+
+            <button id="btnRegister" class="mt-2 p-2 bg-orange border-none text-white rounded-sm">Daftar</button>
+
+            <p class="mx-auto mt-2">Sudah memiliki akun? <a href="login.html">Login</a></p>
+        </div>
+
+        <p class="text-white mx-auto mt-4 opacity-80">Copyright © 2025 Hacktivfit Team</p>
+
+    </div>
+
+    <script src="script/register.js"></script>
+</body>
+
+</html>

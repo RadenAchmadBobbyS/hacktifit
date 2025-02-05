@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5511e;
+    font-family: Poppins;
+}
+
+/* FLEX */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* BACKGROUNDS */
+.bg-orange {
+    background-color: #f5511e;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/* SIZING */
+
+/* height wrap content */
+.h-auto {
+    height: auto;
+}
+
+/* height match parent : follow parent height*/
+.h-full {
+    height: 100%;
+}
+
+/* height match screen : follow screen height */
+.h-screen {
+    height: 100vh;
+}
+
+.h-200 {
+    height: 200px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.w-md {
+    width: 28rem;
+}
+
+/* SPACING */
+/* wrap content and center it or auto margin left and right (so it's horizontal center actually) */
+.mx-auto {
+    margin: 0 auto;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+/* EFFECT */
+.opacity-80 {
+    opacity: 0.8;
+}
+
+/* TEXT  */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-black {
+    color: #1b1b1b;
+}
+
+.text-orange {
+    color: #f5511e;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-6xl {
+    font-size: 3.75rem;
+}
+
+/* BORDER  */
+.border-check {
+    border: solid;
+}
+
+.border-gray {
+    border-color: gray;
+}
+
+.rounded-sm {
+    border-radius: 0.25rem;
+}
+
+.border-none {
+    border: none;
+}
+
+/* DISPLAY  */
+.hidden {
+    display: none;
+}

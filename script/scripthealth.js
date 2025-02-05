@@ -1,3 +1,14 @@
+// document.getElementById("btnLogout").addEventListener("click", () => {
+//     logout()
+// })
+
+// function logout() {
+//     localStorage.setItem("isLogin", false)
+//     localStorage.removeItem("user")
+//     window.location.href = 'login.html'
+// }
+
+
 //======= Burn Calories DOM ========//
 
 // Get references to DOM elements
@@ -21,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Event listener for form submission
-workoutForm.addEventListener('submit', function(event) {
+workoutForm.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
     addWorkout(); // Add the new workout to the list
     workoutForm.reset(); // Clear the form inputs after submission
@@ -46,7 +57,7 @@ function saveWorkouts() {
 function addWorkout() {
     const workoutName = workoutNameInput.value.trim(); // Get workout name
     const caloriesBurned = parseInt(caloriesBurnedInput.value.trim()); // Get calories burned
-    
+
     // Validation: Check if inputs are valid
     if (workoutName === '' || isNaN(caloriesBurned) || caloriesBurned <= 0) {
         alert('Please enter valid workout details.');
@@ -80,7 +91,7 @@ function displayWorkout(workout) {
     `;
 
     // Event listener for delete button
-    li.querySelector('.delete-btn').addEventListener('click', function() {
+    li.querySelector('.delete-btn').addEventListener('click', function () {
         deleteWorkout(workout.id); // Delete the workout on click
     });
 
@@ -164,14 +175,14 @@ function clearInputs() {
     bInput.value = ""
 }
 
-function addToLocalStorage(){
+function addToLocalStorage() {
     localStorage.setItem("date", JSON.stringify(date))
     localStorage.setItem("water", JSON.stringify(water))
     localStorage.setItem("exercise", JSON.stringify(exercise))
     localStorage.setItem("bloodsugar", JSON.stringify(bloodsugar))
 }
 
-function activateEdit(i){
+function activateEdit(i) {
     wInput.value = water[i]
     eInput.value = exercise[i]
     bInput.value = bloodsugar[i]
@@ -187,8 +198,8 @@ function cancelEdit() {
     editSection.classList.add("hidden")
 }
 
-function editRow(){
-    if(editIndex==-1) return
+function editRow() {
+    if (editIndex == -1) return
     water[editIndex] = wInput.value
     exercise[editIndex] = eInput.value
     bloodsugar[editIndex] = bInput.value
@@ -197,33 +208,33 @@ function editRow(){
     cancelEdit()
 }
 
-function deleteRow(i){
-    if(!confirm(
-    `Confirm that you want to delete the entry: 
+function deleteRow(i) {
+    if (!confirm(
+        `Confirm that you want to delete the entry: 
     \n ${date[i]}: ${water[i]}ml, ${exercise[i]}min, 
-${bloodsugar[i]}mg/dL`)) 
-return
+${bloodsugar[i]}mg/dL`))
+        return
     date.splice(i, 1)
     water.splice(i, 1)
     exercise.splice(i, 1)
     bloodsugar.splice(i, 1)
-document.querySelector(`#output > tr:nth-child(${i+1})`)
-    .classList.add("delete-animation")
+    document.querySelector(`#output > tr:nth-child(${i + 1})`)
+        .classList.add("delete-animation")
     addToLocalStorage()
     setTimeout(fillTable, 500)
 }
 
-function fillTable(){
+function fillTable() {
     const tbody = document.getElementById("output")
-    const rows = 
+    const rows =
         Math.max(water.length, exercise.length, bloodsugar.length)
     let html = ""
-    for(let i=0; i<rows; i++){
+    for (let i = 0; i < rows; i++) {
         let w = water[i] || "N/A"
         let e = exercise[i] || "N/A"
         let b = bloodsugar[i] || "N/A"
         let d = date[i] || "N/A"
-        html+=`<tr>
+        html += `<tr>
             <td>${d}</td>
             <td>${w}</td>
             <td>${e}</td>
@@ -239,20 +250,20 @@ function fillTable(){
                     class="delete">${deleteIcon}
                 </button>
             </td>
-        </tr>`        
+        </tr>`
     }
     tbody.innerHTML = html;
 }
 
 let editIndex = -1;
 
-let date = 
+let date =
     JSON.parse(localStorage.getItem("date")) || []
-let water = 
+let water =
     JSON.parse(localStorage.getItem("water")) || []
-let exercise = 
+let exercise =
     JSON.parse(localStorage.getItem("exercise")) || []
-let bloodsugar = 
+let bloodsugar =
     JSON.parse(localStorage.getItem("bloodsugar")) || []
 
 const wInput = document.getElementById("water")
@@ -264,11 +275,11 @@ const editSection = document.getElementById("editSection")
 
 fillTable()
 
-submitButton.addEventListener("click", ()=>{
+submitButton.addEventListener("click", () => {
     const w = wInput.value || null;
     const e = eInput.value || null;
     const b = bInput.value || null;
-    if(w===null || e===null || b===null) {
+    if (w === null || e === null || b === null) {
         alert("Please enter all the fields.")
         return
     }

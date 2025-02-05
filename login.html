@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+    <div class="flex flex-col justify-center h-screen">
+
+        <div class="flex flex-col p-8 justify-center bg-white w-md mx-auto mt-4 rounded-sm">
+            <h1 class="mx-auto text-orange text-6xl">H<span class="text-black text-4xl">acktifit</span></h1>
+            <p id="error" class="text-center text-red hidden">error</p>
+            <label class="mt-4">Email</label>
+            <input id="input_email" type="text" class="p-2 rounded-sm border-gray" placeholder="Masukkan email" />
+
+            <label>Password</label>
+            <input id="input_password" type="password" class="p-2 rounded-sm border-gray"
+                placeholder="Masukkan password" />
+
+            <button id="btnLogin" class="mt-2 p-2 bg-orange border-none text-white rounded-sm">Login</button>
+
+            <p class="mx-auto mt-2">Belum memiliki akun? <a href="register.html">Daftar</a></p>
+        </div>
+
+        <p class="text-white mx-auto mt-4 opacity-80">Copyright © 2025 Hacktifit Team</p>
+
+    </div>
+
+    <script src="script/login.js"></script>
+
+</body>
+
+</html>
