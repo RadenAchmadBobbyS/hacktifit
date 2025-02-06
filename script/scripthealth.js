@@ -301,7 +301,6 @@ submitButton.addEventListener("click", () => {
 
 function showInformation() {
     let user = JSON.parse(localStorage.getItem('user'))
-    welcome.innerHTML = `Selamat datang ${user['nama_lengkap']}`
 }
 showInformation()
 
@@ -312,6 +311,5 @@ function showTotalCalories() {
     for (let workout of workouts) {
         totalCalories += workout['calories']
     }
-    alert(totalCalories)
 }
 showTotalCalories()

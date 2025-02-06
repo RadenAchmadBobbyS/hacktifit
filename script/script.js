@@ -217,8 +217,6 @@ function fillTable(){
             <td>${e}</td>
             <td>${b}</td>
               </tr>`        
-
-       
     }
     tbody.innerHTML = html;
 }
@@ -248,5 +246,50 @@ const editSection = document.getElementById("editSection")
 fillTable()
 
 
+function showInformation() {
+    let user = JSON.parse(localStorage.getItem('user'))
+    const users = document.getElementById('users')
+    const userss = document.getElementById('userss')
+    users.innerHTML = `${user['nama_lengkap']}`
+    userss.innerHTML = `${user['nama_lengkap']}`
+}
+showInformation()
 
 
+function showTotalCalories() {
+    let workouts = JSON.parse(localStorage.getItem('workouts'))
+    const result = document.getElementById('result')
+    let totalCalories = 0
+    for (let workout of workouts) {
+        totalCalories += workout['calories']
+    }
+    let msg = ''
+
+    if (totalCalories < 1000) {
+        msg = `Anda disarankan untuk mengurangi kalori sebesar 1.000 kkal per hari untuk menurunkan berat badan sebesar 0,5 – 1 kilogram dalam seminggu. Anda sudah membakar kalori sebanyak ${totalCalories} kalori.`
+    } else if (totalCalories > 1000) {
+        msg = `Anda sudah mengurangi kalori sebesar ${totalCalories} kkal, anda hebat`
+    }
+    result.innerHTML = `${msg}`
+}
+showTotalCalories()
+
+function showTotalWater() {
+    let waters = JSON.parse(localStorage.getItem('water')) 
+    const result2 = document.getElementById('result2')
+    let totalWater = 0
+    for (let water of waters) {
+        totalWater += Number(water)
+    }
+    let msg = ''
+    let min = 1840 // mililiter
+
+    if (totalWater < min) {
+        msg = `Konsumsi air putih yang disarankan yaitu sekitar delapan gelas berukuran 230 ml per hari atau total 2 liter. Hari ini anda baru meminum ${totalWater} ml, Anda perlu meminum ${totalWater - min} ml lagi untuk mencukupi kebutuhan air perhari`
+    } else if (totalWater > min) {
+        msg = `Hari ini anda sudah mencukupi konsumsi air putih yang disarankan, yaitu sebanyak ${totalWater}`
+    }
+    result2.innerHTML = `${msg}`
+}
+
+showTotalWater()
