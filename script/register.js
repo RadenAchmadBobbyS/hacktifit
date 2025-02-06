@@ -1,8 +1,8 @@
-if (localStorage.getItem("isLogin") !== null) {
-    if (localStorage.getItem("isLogin") === 'true') {
-        window.location.href = 'index.html'
-    }
-}
+// if (localStorage.getItem("isLogin") !== null) {
+//     if (localStorage.getItem("isLogin") === 'true') {
+//         window.location.href = 'index.html'
+//     }
+// }
 
 
 let users

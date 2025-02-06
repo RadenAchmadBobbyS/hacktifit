@@ -134,6 +134,7 @@ function updateTotalCalories() {
     totalCaloriesDisplay.textContent = totalCalories; // Update DOM
 }
 
+
 // Initialize the chart using Chart.js
 function initChart() {
     const ctx = document.getElementById('caloriesChart').getContext('2d');
@@ -199,13 +200,12 @@ function addToLocalStorage(){
 }
 
 
-
-
 function fillTable(){
     const tbody = document.getElementById("output")
     const rows = 
         Math.max(water.length, exercise.length, bloodsugar.length)
     let html = ""
+
     for(let i=0; i<rows; i++){
         let w = water[i] || "N/A"
         let e = exercise[i] || "N/A"
@@ -217,9 +217,15 @@ function fillTable(){
             <td>${e}</td>
             <td>${b}</td>
               </tr>`        
+
+       
     }
     tbody.innerHTML = html;
 }
+
+const spanResult = document.getElementById("result")
+const total = document.getElementById("total-calories")
+
 
 let editIndex = -1;
 
@@ -240,4 +246,7 @@ const submitButton = document.getElementById("submit")
 const editSection = document.getElementById("editSection")
 
 fillTable()
+
+
+
 
