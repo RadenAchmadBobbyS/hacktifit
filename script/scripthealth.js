@@ -18,6 +18,8 @@ const caloriesBurnedInput = document.getElementById('calories-burned');
 const workoutsList = document.getElementById('workouts');
 const totalCaloriesDisplay = document.getElementById('total-calories');
 
+const welcome = document.getElementById('welcome')
+
 let workouts = []; // Array to store workout data
 let totalCalories = 0; // Variable for total calories burned
 
@@ -296,3 +298,9 @@ submitButton.addEventListener("click", () => {
     fillTable()
     addToLocalStorage()
 })
+
+function showInformation() {
+    let user = JSON.parse(localStorage.getItem('user'))
+    welcome.innerHTML = `Selamat datang ${user['nama_lengkap']}`
+}
+showInformation()
