@@ -297,3 +297,17 @@ submitButton.addEventListener("click", () => {
     addToLocalStorage()
 })
 
+function showInformation() {
+    let user = JSON.parse(localStorage.getItem('user'))
+}
+showInformation()
+
+
+function showTotalCalories() {
+    let workouts = JSON.parse(localStorage.getItem('workouts'))
+    let totalCalories = 0
+    for (let workout of workouts) {
+        totalCalories += workout['calories']
+    }
+}
+showTotalCalories()
