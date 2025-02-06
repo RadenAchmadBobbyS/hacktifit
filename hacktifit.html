@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,21 +32,39 @@
           </div>
         </div>
       </nav>
-    <div class="container">
+
+    <!-- Link to external CSS file for custom styling -->
+    <link rel="stylesheet" href="css/fitnes.css">
+
+    <!-- Chart.js library for rendering bar chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Main container wrapping all content -->
         <header>
             <br><br><br>
             <h1><a href="home.html">Hacktifit</a></h1>
             <p>Lacak latihan Anda dan kalori yang terbakar</p>
+            <br>
+            <p id="welcome"></p>
         </header>
 
+
+        <!-- Section for adding workout data with form input -->
         <section class="input-section">
-            <h3>Tambahkan Workout</h3>
+
+            <h2>Tambahkan Latihan</h2>
+            <!-- Form for user input with workout name and calories burned -->
+
             <form id="workout-form">
                 <input type="text" id="workout-name" placeholder="Workout Name" required>
                 <input type="number" id="calories-burned" placeholder="Calories Burned" required min="1">
                 <button type="submit">Add</button>
             </form>
         </section><br><br><br>
+
+        </section>
 
         <section class="input-section">
         <section class="workout-list">
@@ -88,6 +107,33 @@
             </div>
             <section class="input-section">
                     <table class="table table-hover">
+    <br><br><br><br><br><br><br><br>
+    <div id="fitnes" class="scrollto clearfix">
+        <div class="row no-padding-bottom clearfix">
+            <div class="section-heading">
+                <h1 class="section-title" style="text-align: center;">Seberapa lama kamu olahraga?</h1><br><br>
+            </div>
+            <div class="app">
+                <div class="inputs">
+                    <div>
+                        <label for="water">Water Intake (in ml)</label>
+                        <input id="water" type="number">
+                    </div>
+                    <div>
+                        <label for="exercise">Exercise Duration (in min)</label>
+                        <input id="exercise" type="number">
+                    </div>
+                    <div>
+                        <label for="bloodsugerlevel">Blood Sugar Level (in mg/dL)</label>
+                        <input id="bloodsugerlevel" type="number">
+                    </div>
+                </div>
+                <button id="submit">Submit</button>
+                <div id="editSection" class="hidden">
+                    <button id="cancelEdit" onclick="cancelEdit()">Cancel</button>
+                    <button id="updateEntry" onclick="editRow()">Update</button>
+                </div>
+                <table>
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -110,8 +156,13 @@
               <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
           </footer>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <!-- Link to external JavaScript file for functionality -->
     <script src="script/scripthealth.js"></script>
 </body>
+
 </html>
