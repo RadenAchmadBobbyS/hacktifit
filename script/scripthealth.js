@@ -304,3 +304,14 @@ function showInformation() {
     welcome.innerHTML = `Selamat datang ${user['nama_lengkap']}`
 }
 showInformation()
+
+
+function showTotalCalories() {
+    let workouts = JSON.parse(localStorage.getItem('workouts'))
+    let totalCalories = 0
+    for (let workout of workouts) {
+        totalCalories += workout['calories']
+    }
+    alert(totalCalories)
+}
+showTotalCalories()
