@@ -296,3 +296,4 @@ submitButton.addEventListener("click", () => {
     fillTable()
     addToLocalStorage()
 })
+
